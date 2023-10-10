@@ -44,7 +44,7 @@ const getNoteByIdHandler = (request, h) => {
 
     const note = notes.filter((n) => n.id === id)[0];
 
-    if (note !== undefined) {
+    if (note === undefined) {
         return h.response({
             status: 'fail',
             message: 'Catatan tidak ditemukan'
